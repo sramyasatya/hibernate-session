@@ -10,7 +10,7 @@ import com.ramya.bean.Customer;
 
 //import org.hibernate.SessionFactory;
 
-//Ramya forgets passwo\|R?"D/'
+
 public class AddCustomer {
 public static void main(String args[])
 {

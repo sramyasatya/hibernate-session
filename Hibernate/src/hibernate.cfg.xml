@@ -38,6 +38,9 @@
 
         <!-- Names the annotated entity class -->
         <mapping class="com.ramya.bean.Customer"/>
+         <mapping class="com.ramya.bean.Student"/>
+          <mapping class="com.ramya.bean.Employee"/>
+           
         
 
     </session-factory>
