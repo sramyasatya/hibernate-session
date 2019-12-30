@@ -1,8 +1,8 @@
-package com.ramya.bean;
+package com.ramya.dao;
 import org.hibernate.*;
 import org.hibernate.cfg.*;
 //import java.awt.List;
-import com.ramya.bean.Employee;
+import com.ramya.bean.Student;
 //import java.util.List;
 
 //import org.hibernate.Session;
@@ -10,32 +10,27 @@ import com.ramya.bean.Employee;
 //import org.hibernate.cfg.Configuration;
 
 
-public class TwoClassesOneTableDemo {
-
+public class SingleClassTwoTable {
 	public static void main(String args[])
 	{
 		SessionFactory factory=new Configuration()
 				.configure("hibernate.cfg.xml")
-				.addAnnotatedClass(Employee.class)
-				.addAnnotatedClass(EmployeeDetails.class)
+				.addAnnotatedClass(Student.class)
 				.buildSessionFactory();
 		
 		Session session=factory.getCurrentSession();
 		
         try
        {
-        	
-        	//create object
-        	EmployeeDetails empDetails=new EmployeeDetails(42,"chennaiOne");
-        	//create employee object
-        	Employee emp=new Employee();
-        	emp.setEmpId(1002);
-        	emp.setName("Raghavi");
-        	emp.setSalary(55000.0);
-        	emp.setEmpDetails(empDetails);
         	session.beginTransaction();
+        	//create object
+        	Student std1=new Student();
+        	std1.setStudentName("Ram");
+        	std1.setAge(10);
+        	std1.setStudentName("xyz school");
         	
-        	session.save(emp);
+        	
+        	session.save(std1);
         	session.getTransaction().commit();
        }
         finally {

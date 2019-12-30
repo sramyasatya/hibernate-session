@@ -1,4 +1,4 @@
-package com.ramya.bean;
+package com.ramya.dao;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

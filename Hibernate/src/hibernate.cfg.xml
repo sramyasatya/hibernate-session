@@ -44,6 +44,10 @@
          <mapping class="com.ramya.bean.Parent"/>
          <mapping class="com.ramya.bean.Child"/>
          <mapping class="com.ramya.bean.GrandChild"/>
+         <mapping class="com.ramya.bean.Emp"/>
+         <mapping class="com.ramya.bean.Department"/>
+         <mapping class="com.ramya.bean.StudentDetails"/>
+         
           
            
         
