@@ -20,7 +20,7 @@ public class Student {
 	public Student() {}
 	
 	public Student(int rollNo, String studentName, int age) {
-//		super();
+		super();
 		this.rollNo = rollNo;
 		this.studentName = studentName;
 		this.age = age;

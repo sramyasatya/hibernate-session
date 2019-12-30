@@ -14,18 +14,8 @@ public class Employee {
 	private String name;
 	private double salary;
 	
-	@Embedded
-	private EmployeeDetails empDetails;
-	//Constructors
-	//no arg constructor
 	public Employee() {
 
-	}
-	public EmployeeDetails getEmpDetails() {
-		return empDetails;
-	}
-	public void setEmpDetails(EmployeeDetails empDetails) {
-		this.empDetails = empDetails;
 	}
 	public Employee(int empId, String name, double salary,EmployeeDetails empDetails) {
 		super();
@@ -33,6 +23,19 @@ public class Employee {
 		this.name = name;
 		this.salary = salary;
 	}
+	
+	@Embedded
+	private EmployeeDetails empDetails;
+	//Constructors
+	//no arg constructor
+	
+	public EmployeeDetails getEmpDetails() {
+		return empDetails;
+	}
+	public void setEmpDetails(EmployeeDetails empDetails) {
+		this.empDetails = empDetails;
+	}
+	
 	//getters and setters
 	public int getEmpId() {
 		return empId;

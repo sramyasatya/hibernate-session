@@ -39,6 +39,11 @@
         <!-- Names the annotated entity class -->
         <mapping class="com.ramya.bean.Customer"/>
          <mapping class="com.ramya.bean.Student"/>
+         <mapping class="com.ramya.bean.Employee"/>
+         <mapping class="com.ramya.bean.EmployeeDetails"/>
+         <mapping class="com.ramya.bean.Parent"/>
+         <mapping class="com.ramya.bean.Child"/>
+         <mapping class="com.ramya.bean.GrandChild"/>
           
            
         
