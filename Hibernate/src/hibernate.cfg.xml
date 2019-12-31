@@ -47,13 +47,14 @@
          <mapping class="com.ramya.bean.Emp"/>
          <mapping class="com.ramya.bean.Department"/>
          <mapping class="com.ramya.bean.StudentDetails"/>
-         <mapping class="com.ramya.bean.StudentColl"/>
+         <mapping class="com.ramya.bean.Studentcoll"/>
          <mapping class="com.ramya.bean.College"/>
-         
-          
-           
-        
-
+         <mapping class="com.ramya.bean.Delegate"/>
+         <mapping class="com.ramya.bean.Event"/>
+         <mapping class="com.ramya.bean.Cart"/>
+         <mapping class="com.ramya.bean.Items"/>
+         <mapping class="com.ramya.bean.Author"/>
+          <mapping class="com.ramya.bean.Books"/>      
     </session-factory>
 
 </hibernate-configuration>

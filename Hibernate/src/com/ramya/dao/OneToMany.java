@@ -23,25 +23,43 @@ public class OneToMany{
 			
 	        try
 	       {
-	        	College college=new College();
-				college.setCollegeId(100);
-				college.setCollegeName("abc");
-				Studentcoll std1=new Studentcoll(01,"sumi",college);
-				Studentcoll std2=new Studentcoll(02,"abi",college);
-				
-				//add students to college
-				college.getStudentcoll().add(std1);
-				college.getStudentcoll().add(std2);
-				//BeginTransaction
-				session.beginTransaction();
-				//save object
-				session.save(college);
-				session.save(std1);
-				session.save(std2);
-				//commit 
-				session.getTransaction().commit();
+	        	//to set values
+	 
+	        		College college=new College();
+	        		college.setCollegeId(100);
+	        		college.setCollegeName("abc");
+	        		Studentcoll std1=new Studentcoll(01,"sumi",college);
+	        		Studentcoll std2=new Studentcoll(02,"abi",college);
+	        		
+	        		//add students to college
+	        		college.getStudentcoll().add(std1);
+	        		college.getStudentcoll().add(std2);
+	        		//BeginTransaction
+	        		session.beginTransaction();
+	        		//save object
+	        		session.save(college);
+	        		session.save(std1);
+	        		session.save(std2);
+	        		//commit 
+	        		session.getTransaction().commit();
+	        		
+	        	}
 	        	
-	       }
+	        	//-------------------------------------------------------------------
+	        	//for gettting the value we must add begintransaction in the first itself
+//	        	session.beginTransaction();
+//	        	
+//	        	College college=session.get(Studentcoll.class,02);
+//	        	
+//	        	College college=new College();
+//				college.setCollegeId(100);
+//				college.setCollegeName("abc");
+//				Studentcoll std1=new Studentcoll(01,"sumi",college);
+//				Studentcoll std2=new Studentcoll(02,"abi",college);
+//				
+//				Studentcoll student=session.get(college.class,100);
+				      	
+	     //  }
 	        finally {
 	        	session.close();
 	        	factory.close();
