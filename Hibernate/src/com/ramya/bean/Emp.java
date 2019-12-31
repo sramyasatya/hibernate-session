@@ -17,8 +17,8 @@ public class Emp {
 	
 	
 	//cascade operation-all(merge,remove,detach...
-	//FetchType-EAGER-loads both tables data at the time of retrival
-	@OneToOne(cascade=CascadeType.ALL)
+	//FetchType-EAGER-loads both tables data at the time of retrieval
+	@OneToOne(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
 	@JoinColumn(name="emp_dept")
 	private Department department;
 	
